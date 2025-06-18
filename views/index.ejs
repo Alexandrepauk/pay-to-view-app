@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Photo Privée</title></head>
+  <body>
+    <% if (unlocked) { %>
+      <h2>Merci ! Voici ta photo :</h2>
+      <img src="/image-clear.jpg" width="300">
+    <% } else { %>
+      <h2>Photo Floutée — Débloque-la :</h2>
+      <img src="/image-blur.jpg" width="300">
+      <form action="/create-checkout-session" method="POST">
+        <button>Payer 5 € et débloquer</button>
+      </form>
+    <% } %>
+  </body>
+</html>
